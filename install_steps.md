@@ -16,7 +16,7 @@
    sudo mysql_secure_installation
    ```
 
-   <img height="500" width="500" src="/tutorial_images/mysql.png"/>
+   <img height="700" width="500" src="/tutorial_images/mysql.png"/>
 
 3. Test MySQL: <br/>
 
