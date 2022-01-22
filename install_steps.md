@@ -65,6 +65,10 @@ Grafana (Data visualization platform)<br/>
    sudo service apache2 restart
    ```
 
+   Test your installation by opening Chromium in your RPi then entering "http://localhost/phpmyadmin/". It should a page that looks like this:
+
+   <img height="400" width="600" src="/tutorial_images/phpmyadmin_2.png"/>
+
 6. Install Grafana
    ```bash
    wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
