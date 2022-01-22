@@ -16,6 +16,8 @@
    sudo mysql_secure_installation
    ```
 
+   <img src="/tutorial_images/mysql.png"/>
+
 3. Test MySQL: <br/>
 
    ```bash
