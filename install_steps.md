@@ -3,16 +3,16 @@
 1. Install Apache: <br/>
 
    ```bash
-   sudo apt-get update
-   sudo apt-get install apache2 -y
-   sudo usermod -a -G www-data pi
-   sudo chown -R -f www-data:www-data /var/www/html
+   sudo apt-get update              # updates RPi
+   sudo apt-get install apache2     # Installs Apache2
+   sudo usermod -a -G www-data pi   # Adds a new user to access the apache directory
+   sudo chown -R -f www-data:www-data /var/www/html # Allow acces to apache directory
    ```
 
 2. Install MySQL: <br/>
 
    ```bash
-   sudo apt-get install mariadb-server
+   sudo apt-get install mariadb-server  # Installs MySQL
    sudo mysql_secure_installation
    ```
 
@@ -21,18 +21,19 @@
 3. Configure MySQL: <br/>
 
    ```bash
-   sudo mysql -u root -p
+   sudo mysql -u root -p    # Logs in to MySQL environment
    GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
    ```
 
-   <img height="200" width="500" src="/tutorial_images/mysql_2.png"/>
+   <img height="200" width="550" src="/tutorial_images/mysql_2.png"/>
 
+   \*Replace username and password with the ones defined in the setup.
    Exit the MySQL environment by CTRL+C.
 
 4. Install phpMyAdmin <br/>
 
    ```bash
-   sudo apt-get install phpmyadmin
+   sudo apt-get install phpmyadmin  # Installs phpmyadmin
    ```
 
     <img height="700" width="600" src="/tutorial_images/phpmyadmin.png"/>
