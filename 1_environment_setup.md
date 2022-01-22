@@ -9,7 +9,7 @@ Grafana (Data visualization platform)<br/>
 1. Install Apache: <br/>
 
    ```bash
-   sudo apt-get update                                  # updates RPi
+   sudo apt-get update                                  # Updates RPi
    sudo apt-get install apache2                         # Installs Apache2
    sudo usermod -a -G www-data pi                       # Adds a new user to access the apache directory
    sudo chown -R -f www-data:www-data /var/www/html     # Allow acces to apache directory
@@ -65,7 +65,7 @@ Grafana (Data visualization platform)<br/>
    sudo service apache2 restart
    ```
 
-   Test your installation by opening Chromium in your RPi then entering "http://localhost/phpmyadmin/". It should a page that looks like this:
+   Test your installation by opening Chromium in your RPi then enter "http://localhost/phpmyadmin/". It should open a page that looks like this:
 
    <img height="400" width="600" src="/tutorial_images/phpmyadmin_2.png"/>
 
