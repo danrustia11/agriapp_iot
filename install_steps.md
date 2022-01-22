@@ -18,18 +18,24 @@
 
    <img height="700" width="500" src="/tutorial_images/mysql.png"/>
 
-3. Test MySQL: <br/>
+3. Configure MySQL: <br/>
 
    ```bash
    sudo mysql -u root -p
    GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
    ```
 
+   <img height="400" width="500" src="/tutorial_images/mysql_2.png"/>
+
+   Exit the MySQL environment by CTRL+C.
+
 4. Install phpMyAdmin <br/>
 
    ```bash
    sudo apt-get install phpmyadmin
    ```
+
+    <img height="700" width="500" src="/tutorial_images/phpmyadmin.png"/>
 
 5. Configure apache by opening and editing the apache2.conf<br/>
 
