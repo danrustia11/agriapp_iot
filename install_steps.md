@@ -1,5 +1,11 @@
 # Setting up your RPi
 
+The following steps are used to install the following:<br/>
+Apache (Web server)<br/>
+MySQL (Database)<br/>
+phpMyAdmin (Database web interface)<br/>
+Grafana (Data visualization platform)<br/>
+
 1. Install Apache: <br/>
 
    ```bash
@@ -50,7 +56,7 @@
    Include /etc/phpmyadmin/apache.conf
    ```
 
-    <img height="400" width="600" src="/tutorial_images/apache.png"/>
+    <img height="400" width="700" src="/tutorial_images/apache.png"/>
 
    Press CTRL+O then ENTER to save the file.
    Restart apache to apply the changes.
