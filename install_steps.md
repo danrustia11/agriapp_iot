@@ -20,5 +20,5 @@
 
    ```bash
    sudo mysql -u root -p
-   GRANT ALL PRIVILEGES ON _._ TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+   GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
    ```
