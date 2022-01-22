@@ -3,10 +3,10 @@
 1. Install Apache: <br/>
 
    ```bash
-   sudo apt-get update              # updates RPi
-   sudo apt-get install apache2     # Installs Apache2
-   sudo usermod -a -G www-data pi   # Adds a new user to access the apache directory
-   sudo chown -R -f www-data:www-data /var/www/html # Allow acces to apache directory
+   sudo apt-get update                                  # updates RPi
+   sudo apt-get install apache2                         # Installs Apache2
+   sudo usermod -a -G www-data pi                       # Adds a new user to access the apache directory
+   sudo chown -R -f www-data:www-data /var/www/html     # Allow acces to apache directory
    ```
 
 2. Install MySQL: <br/>
@@ -25,7 +25,7 @@
    GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
    ```
 
-   <img height="200" width="550" src="/tutorial_images/mysql_2.png"/>
+   <img height="200" width="650" src="/tutorial_images/mysql_2.png"/>
 
    \*Replace username and password with the ones defined in the setup.
    Exit the MySQL environment by CTRL+C.
