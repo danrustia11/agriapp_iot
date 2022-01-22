@@ -22,3 +22,23 @@
    sudo mysql -u root -p
    GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
    ```
+
+4. Install phpMyAdmin <br/>
+
+   ```bash
+   sudo apt-get install phpmyadmin
+   ```
+
+5. Configure apache by opening and editing the apache2.conf<br/>
+
+   ```bash
+   sudo nano /etc/apache2/apache2.conf
+   ```
+
+   Add this line at the bottom of the apache2.conf
+
+   ```bash
+   Include /etc/phpmyadmin/apache.conf
+   ```
+
+   Press CTRL+O then ENTER to save the file.
