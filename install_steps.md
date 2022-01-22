@@ -1,4 +1,4 @@
-# Environmental setup
+# Setting up your RPi
 
 1. Install Apache: <br/>
    sudo apt-get update <br/>
