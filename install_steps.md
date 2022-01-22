@@ -25,7 +25,7 @@
    GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
    ```
 
-   <img height="400" width="500" src="/tutorial_images/mysql_2.png"/>
+   <img height="200" width="500" src="/tutorial_images/mysql_2.png"/>
 
    Exit the MySQL environment by CTRL+C.
 
@@ -35,7 +35,7 @@
    sudo apt-get install phpmyadmin
    ```
 
-    <img height="700" width="500" src="/tutorial_images/phpmyadmin.png"/>
+    <img height="700" width="600" src="/tutorial_images/phpmyadmin.png"/>
 
 5. Configure apache by opening and editing the apache2.conf<br/>
 
