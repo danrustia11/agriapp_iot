@@ -10,7 +10,7 @@ Grafana (Data visualization platform)<br/>
 
    ```bash
    sudo apt-get update                                  # Updates RPi
-   sudo apt-get install apache2                         # Installs Apache2
+   sudo apt-get install apache2 -y                      # Installs Apache2
    sudo usermod -a -G www-data pi                       # Adds a new user to access the apache directory
    sudo chown -R -f www-data:www-data /var/www/html     # Allow acces to apache directory
    ```
@@ -18,7 +18,7 @@ Grafana (Data visualization platform)<br/>
 2. Install MySQL: <br/>
 
    ```bash
-   sudo apt-get install mariadb-server  # Installs MySQL
+   sudo apt-get install mariadb-server -y               # Installs MySQL
    sudo mysql_secure_installation
    ```
 
@@ -33,7 +33,7 @@ Grafana (Data visualization platform)<br/>
 
    <img height="200" width="650" src="/tutorial_images/mysql_2.png"/>
 
-   \*Replace username and password with the ones defined in the setup.
+   \*Remember to replace username and password with the ones defined in the setup.
    Exit the MySQL environment by CTRL+C.
 
 4. Install phpMyAdmin <br/>
@@ -74,7 +74,7 @@ Grafana (Data visualization platform)<br/>
    wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
    echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
    sudo apt-get update
-   sudo apt-get install grafana
+   sudo apt-get install grafana -y
    sudo /bin/systemctl enable grafana-server
    sudo /bin/systemctl start grafana-server
    ```
