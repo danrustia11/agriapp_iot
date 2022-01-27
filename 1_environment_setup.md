@@ -70,6 +70,7 @@ Grafana (Data visualization platform)<br/>
    <img height="400" width="600" src="/tutorial_images/phpmyadmin_2.png"/>
 
 6. Install Grafana
+
    ```bash
    wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
    echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
@@ -78,3 +79,7 @@ Grafana (Data visualization platform)<br/>
    sudo /bin/systemctl enable grafana-server
    sudo /bin/systemctl start grafana-server
    ```
+
+   Test your installations by opening Chromium in your RPi then enter "http://localhost:3000". It should open a page that looks like this:
+
+   <img height="400" width="600" src="/tutorial_images/grafana.png"/>
