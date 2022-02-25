@@ -1,6 +1,6 @@
 # Setting up your RPi
 
-First, open this tutorial by opening Chromium then enter https://github.com/danrustia11/agriapp_iot as the destination URL.<br/>
+First, open this tutorial by opening your VM's web browser then enter https://github.com/danrustia11/agriapp_iot as the destination URL.<br/>
 Go to 1_environment_setup.md <br/>
 
 The following steps are used to install the following:<br/>
