@@ -24,7 +24,8 @@ TIP: You can copy each line to the terminal by CTRL+SHIFT+V<br/>
    sudo mysql_secure_installation
    ```
 
-   <img height="700" width="500" src="/tutorial_images/mysql.png"/>
+   <img height="700" width="800" src="/tutorial_images/mysql.png"/>
+
    \*For tutorial purposes, use 123456 as password
    \*Answer Y in all the [Y/n] questions
 
