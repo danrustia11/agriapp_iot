@@ -3,7 +3,7 @@
 The following steps are used to install the following:<br/>
 Apache (Web server)<br/>
 MySQL (Database)<br/>
-phpMyAdmin (Database web interface)<br/>
+Adminer (Database web interface)<br/>
 Grafana (Data visualization platform)<br/>
 
 1. Install Apache: <br/>
@@ -35,6 +35,15 @@ Grafana (Data visualization platform)<br/>
 
    \*Remember to replace username and password with the ones defined in the setup.
    Exit the MySQL environment by CTRL+C.
+
+
+
+
+
+
+
+
+
 
 4. Install phpMyAdmin <br/>
 
