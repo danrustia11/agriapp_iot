@@ -1,38 +1,19 @@
-# Setting up your RPi
+# Running an MQTT subscriber for collecting data
 
-Please make sure that you have accomplished 1_environment_setup.md and 2_creating_a_database.md before proceeding to this step<br/>
+We have already cloned the github repository that contains the codes for this part. Open File explorer (the second icon found on the lower left of your VM). Open the <b>agriapp_iot</b> folder.
 
-1. Open Adminer in your browser <br/>
+1. Right click on the file <b>agriapp_sensor_subscriber.py</b> and click Thonny Python Ide <br/>
+   This opens the file in a Python programming IDE called Thonny. </br>
 
-   <img height="350" width="700" src="/tutorial_images/db_1.png"/>
+   <img height="500" width="700" src="/tutorial_images/mqtt_1.png"/>
 
-2. Enter your username and password (Example: username=root, password=123456) <br/>
+2. Listen to the code explanation provided by your instruction in the tutorial <br/>
 
-   <img height="400" width="700" src="/tutorial_images/db_2.png"/>
+3. Change the target_node variable depending on which node's data you want to collect <br/>
 
-3. Create a MySQL database <br/>
+   <img height="500" width="700" src="/tutorial_images/mqtt_2.png"/>
 
-   <img height="400" width="700" src="/tutorial_images/db_3.png"/>
+4. Run the program by clicking Run, as found at the top of the IDE <br/>
+   The output should look like this: </br>
 
-4. Define the database name such as "agriapp_data". Use "utf8_general_ci" as collation. Click Save.<br/>
-
-   <img height="400" width="700" src="/tutorial_images/db_4.png"/>
-
-   The output should look like this:
-
-   <img height="400" width="700" src="/tutorial_images/db_5.png"/>
-
-5. Next, click Create Table <br/>
-
-   <img height="400" width="700" src="/tutorial_images/db_6.png"/>
-
-6. Configure the table by:
-   a. Set Table name as "sensor_data"
-   b. Set the column names, type, length, and AI, as shown in the screenshot below
-
-   <img height="400" width="700" src="/tutorial_images/db_7.png"/>
-
-   c. Click Save
-   d. The output should be as shown below:
-
-   <img height="400" width="700" src="/tutorial_images/db_8.png"/>
+   <img height="400" width="700" src="/tutorial_images/mqtt_3.png"/>

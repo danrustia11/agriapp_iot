@@ -26,7 +26,7 @@ Please make sure that you have accomplished 1_environment_setup.md before procee
 
    <img height="400" width="700" src="/tutorial_images/db_6.png"/>
 
-6. Configure the table by: </br>
+6. Configure the table </br>
    a. Set Table name as "sensor_data" </br>
    b. Set the column names, type, length, and AI, as shown in the screenshot below </br>
 
