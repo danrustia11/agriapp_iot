@@ -1,5 +1,5 @@
-pip3 install pika -y
-pip3 install mysql-connector-python -y
+yes | pip3 install pika
+yes | pip3 install mysql-connector-python
 
 sudo apt-get remove mariadb-server -y
 
