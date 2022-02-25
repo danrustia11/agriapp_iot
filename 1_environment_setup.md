@@ -80,7 +80,7 @@ TIP: You can copy each line to the terminal by CTRL+SHIFT+V<br/>
    sudo service apache2 restart                          # Restarts apache service
    ```
 
-   Test your installation by opening Chromium in your RPi then enter "http://localhost/adminer/". It should open a page that looks like this:
+   Test your installation by opening your VM's web browser then enter "http://localhost/adminer/". It should open a page that looks like this:
 
    <img height="400" width="800" src="/tutorial_images/adminer.png"/>
 
@@ -95,6 +95,6 @@ TIP: You can copy each line to the terminal by CTRL+SHIFT+V<br/>
    sudo /bin/systemctl start grafana-server           # Starts Grafana service
    ```
 
-   Test your installations by opening Chromium in your RPi then enter "http://localhost:3000". It should open a page that looks like this:
+   Test your installation by opening your VM's web browser then enter "http://localhost:3000". It should open a page that looks like this:
 
    <img height="400" width="600" src="/tutorial_images/grafana.png"/>
