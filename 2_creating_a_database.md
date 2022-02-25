@@ -1,4 +1,4 @@
-# Setting up your RPi
+# Creating a MySQL database
 
 Please make sure that you have accomplished 1_environment_setup.md before proceeding to this step.<br/>
 
@@ -26,13 +26,13 @@ Please make sure that you have accomplished 1_environment_setup.md before procee
 
    <img height="400" width="700" src="/tutorial_images/db_6.png"/>
 
-6. Configure the table by:
-   a. Set Table name as "sensor_data"
-   b. Set the column names, type, length, and AI, as shown in the screenshot below
+6. Configure the table by: </br>
+   a. Set Table name as "sensor_data" </br>
+   b. Set the column names, type, length, and AI, as shown in the screenshot below </br>
 
    <img height="400" width="700" src="/tutorial_images/db_7.png"/>
 
-   c. Click Save
+   c. Click Save </br>
    d. The output should be as shown below:
 
    <img height="400" width="700" src="/tutorial_images/db_8.png"/>
