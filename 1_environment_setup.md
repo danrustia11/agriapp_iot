@@ -36,47 +36,43 @@ Grafana (Data visualization platform)<br/>
    \*Remember to replace username and password with the ones defined in the setup.
    Exit the MySQL environment by CTRL+C.
 
-
-
-
-
-
-
-
-
-
-4. Install phpMyAdmin <br/>
+4. Install Adminer <br/>
 
    ```bash
-   sudo apt-get install phpmyadmin  # Installs phpmyadmin
+   sudo apt-get install php-mysql                                                   # Installs php-mysql plugin for enabling adminer
+   sudo mkdir /usr/share/adminer                                                    # Creates a new directory for adminer
+   sudo wget -O /usr/share/adminer/index.php http://www.adminer.org/latest-en.php   # Downloads the latest version of adminer
    ```
 
-    <img height="700" width="600" src="/tutorial_images/phpmyadmin.png"/>
-
-5. Configure apache by opening and editing the apache2.conf<br/>
+5. Incorporate Adminer to Apache <br/>
 
    ```bash
-   sudo nano /etc/apache2/apache2.conf
+   sudo nano /etc/apache2/conf-available/adminer.conf    # Opens adminer.conf using nano text editor
    ```
 
-   Add this line at the bottom of the apache2.conf
+   Copy and paste these lines to the opened file:
 
    ```bash
-   Include /etc/phpmyadmin/apache.conf
+   <Directory /usr/share/adminer>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+   </Directory>
    ```
 
-    <img height="400" width="700" src="/tutorial_images/apache.png"/>
+    <img height="400" width="700" src="/tutorial_images/adminer_configuration.png"/>
 
    Press CTRL+O then ENTER to save the file.
    Restart apache to apply the changes.
 
    ```bash
-   sudo service apache2 restart
+   sudo a2enconf adminer.conf                            # Enables adminer
+   sudo service apache2 restart                          # Restarts apache service
    ```
 
-   Test your installation by opening Chromium in your RPi then enter "http://localhost/phpmyadmin/". It should open a page that looks like this:
+   Test your installation by opening Chromium in your RPi then enter "http://localhost/adminer/". It should open a page that looks like this:
 
-   <img height="400" width="600" src="/tutorial_images/phpmyadmin_2.png"/>
+   <img height="400" width="600" src="/tutorial_images/adminer.png"/>
 
 6. Install Grafana
 

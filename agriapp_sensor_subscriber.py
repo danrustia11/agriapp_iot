@@ -34,6 +34,10 @@ mydb = mysql.connector.connect(
 table_name = "sensor_data"
 mycursor = mydb.cursor()
 
+# Set which node you want to listen to
+target_node = 5
+
+
 
 # Define a routine called "main"
 def main():
@@ -52,9 +56,6 @@ def main():
 
     # Set a callback (an event that will happen after a message has been received)
     def callback(ch, method, properties, body):
-        print("[RX]: {}".format(body))
-        
-        
         # Decode 'body' into a json variable
         json_data = json.loads(body)
         
@@ -64,26 +65,29 @@ def main():
         h = json_data['H']
         p = json_data['P']    
         
+
         
-        
-        # Get the date/time in string format
-        now = datetime.now()
-        dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
-        
-        # Get the date/time in unix format
-        ts = time.time()
-        
-        # Saves data to the database
-        sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt_string, node, "T", t)
-        mycursor.execute(sql)
-        sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt_string, node, "H", h)
-        mycursor.execute(sql)
-        sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt_string, node, "P", p)
-        mycursor.execute(sql)
-        
-        # Apply changes to the database
-        mydb.commit()
-        
+        # Check only data from target_node
+        if node == target_node:
+            print("[RX]: {}".format(body))
+            # Get the date/time in string format
+            now = datetime.now()
+            dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
+            
+            # Get the date/time in unix format
+            ts = time.time()
+            
+            # Saves data to the database
+            sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt_string, node, "T", t)
+            mycursor.execute(sql)
+            sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt_string, node, "H", h)
+            mycursor.execute(sql)
+            sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt_string, node, "P", p)
+            mycursor.execute(sql)
+            
+            # Apply changes to the database
+            mydb.commit()
+            
         
         
     
@@ -109,6 +113,5 @@ if __name__ == '__main__':
             sys.exit(0)
         except SystemExit:
             os._exit(0)
-
 
 
