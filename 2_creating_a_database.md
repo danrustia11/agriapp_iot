@@ -1,4 +1,4 @@
-# Creating a MySQL database
+# Creating a MySQL database and table using Adminer
 
 Please make sure that you have accomplished 1_environment_setup.md before proceeding to this step.<br/>
 
