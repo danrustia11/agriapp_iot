@@ -1,0 +1,11 @@
+pip3 install pika -y
+
+sudo apt-get remove mariadb-server -y
+
+sudo rm -f -R /usr/share/adminer
+sudo a2disconf adminer.conf
+sudo rm -rf /etc/apache2/conf-available/adminer.conf
+sudo rm -rf /var/lib/apache2/conf/disabled_by_admin/adminer
+sudo service apache2 restart
+
+sudo apt-get remove grafana -y
