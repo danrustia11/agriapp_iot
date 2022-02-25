@@ -1,6 +1,6 @@
 # Setting up your RPi
 
-Please make sure that you have accomplished 1_environment_setup.md before proceeding to this step.<br/>
+Please make sure that you have accomplished 1_environment_setup.md and 2_creating_a_database.md before proceeding to this step<br/>
 
 1. Open Adminer in your browser <br/>
 
