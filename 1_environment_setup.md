@@ -5,6 +5,8 @@ Apache (Web server)<br/>
 MySQL (Database)<br/>
 Adminer (Database web interface)<br/>
 Grafana (Data visualization platform)<br/>
+<br/>
+TIP: You can copy each line to the terminal by CTRL+SHIFT+V<br/>
 
 1. Install Apache: <br/>
 
@@ -28,12 +30,12 @@ Grafana (Data visualization platform)<br/>
 
    ```bash
    sudo mysql -u root -p    # Logs in to MySQL environment
-   GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+   GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '123456' WITH GRANT OPTION;
    ```
 
    <img height="200" width="650" src="/tutorial_images/mysql_2.png"/>
 
-   \*Remember to replace username and password with the ones defined in the setup.
+   \*root is the username, while 123456 is the password
    Exit the MySQL environment by CTRL+C.
 
 4. Install Adminer <br/>
@@ -53,6 +55,8 @@ Grafana (Data visualization platform)<br/>
    Copy and paste these lines to the opened file:
 
    ```bash
+   Alias /adminer /usr/share/adminer
+
    <Directory /usr/share/adminer>
     Options Indexes FollowSymLinks
     AllowOverride None
@@ -60,7 +64,7 @@ Grafana (Data visualization platform)<br/>
    </Directory>
    ```
 
-    <img height="400" width="700" src="/tutorial_images/adminer_configuration.png"/>
+    <img height="500" width="700" src="/tutorial_images/adminer_configuration.png"/>
 
    Press CTRL+O then ENTER to save the file.
    Restart apache to apply the changes.
