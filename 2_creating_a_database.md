@@ -4,7 +4,7 @@ Please make sure that you have accomplished 1_environment_setup.md before procee
 
 1. Open Adminer in your browser <br/>
 
-   <img height="400" width="700" src="/tutorial_images/db_1.png"/>
+   <img height="350" width="700" src="/tutorial_images/db_1.png"/>
 
 2. Enter your username and password (Example: username=root, password=123456) <br/>
 
@@ -14,41 +14,17 @@ Please make sure that you have accomplished 1_environment_setup.md before procee
 
    <img height="400" width="700" src="/tutorial_images/db_3.png"/>
 
-4. Define the database name such as "agriapp_data". Use "utf8_general_ci" as collation.<br/>
+4. Define the database name such as "agriapp_data". Use "utf8_general_ci" as collation. Click Save.<br/>
 
    <img height="400" width="700" src="/tutorial_images/db_4.png"/>
 
-5. Add Adminer to Apache <br/>
+   \The output should look like this:
 
-   ```bash
-   sudo nano /etc/apache2/conf-available/adminer.conf    # Opens adminer.conf using nano text editor
-   ```
+   <img height="400" width="700" src="/tutorial_images/db_5.png"/>
 
-   Copy and paste these lines to the opened file:
+5. Next, click Create Table <br/>
 
-   ```bash
-   Alias /adminer /usr/share/adminer
-
-   <Directory /usr/share/adminer>
-    Options Indexes FollowSymLinks
-    AllowOverride None
-    Require all granted
-   </Directory>
-   ```
-
-    <img height="500" width="700" src="/tutorial_images/adminer_configuration.png"/>
-
-   Press CTRL+O then ENTER to save the file.
-   Restart apache to apply the changes.
-
-   ```bash
-   sudo a2enconf adminer.conf                            # Enables adminer
-   sudo service apache2 restart                          # Restarts apache service
-   ```
-
-   Test your installation by opening Chromium in your RPi then enter "http://localhost/adminer/". It should open a page that looks like this:
-
-   <img height="400" width="800" src="/tutorial_images/adminer.png"/>
+   <img height="400" width="700" src="/tutorial_images/db_6.png"/>
 
 6. Install Grafana
 
