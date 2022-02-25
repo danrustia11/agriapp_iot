@@ -1,5 +1,8 @@
 # Setting up your RPi
 
+First, open this tutorial by opening Chromium then enter https://github.com/danrustia11/agriapp_iot as the destination URL.<br/>
+Go to 1_environment_setup.md <br/>
+
 The following steps are used to install the following:<br/>
 Apache (Web server)<br/>
 MySQL (Database)<br/>
@@ -24,7 +27,7 @@ TIP: You can copy each line to the terminal by CTRL+SHIFT+V<br/>
    sudo mysql_secure_installation
    ```
 
-   <img height="700" width="800" src="/tutorial_images/mysql.png"/>
+   <img height="700" width="900" src="/tutorial_images/mysql.png"/>
 
    \*For tutorial purposes, use 123456 as password
    \*Answer Y in all the [Y/n] questions
