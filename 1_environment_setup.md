@@ -25,6 +25,8 @@ TIP: You can copy each line to the terminal by CTRL+SHIFT+V<br/>
    ```
 
    <img height="700" width="500" src="/tutorial_images/mysql.png"/>
+   \*For tutorial purposes, use 123456 as password
+   \*Answer Y in all the [Y/n] questions
 
 3. Configure MySQL: <br/>
 
