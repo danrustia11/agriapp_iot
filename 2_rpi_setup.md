@@ -12,4 +12,5 @@ Raspberry Pi. The RPis provided in this workshop are already set with the steps 
    pip3 install RPi.bme280                 # Installs bme280 library
    pip3 install mysql-connector-python     # Installs mysql library
    pip3 install smbus2                     # Installs smbus2 library
+   pip3 install pika                       # Installs pika MQTT library
    ```
