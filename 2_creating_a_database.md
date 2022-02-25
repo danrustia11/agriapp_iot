@@ -2,7 +2,7 @@
 
 Please make sure that you have accomplished 1_environment_setup.md before proceeding to this step.<br/>
 
-1. Open Adminer in your browser <br/>
+1. Open Adminer in your browser by going to http://localhost/adminer<br/>
 
    <img height="350" width="700" src="/tutorial_images/db_1.png"/>
 
