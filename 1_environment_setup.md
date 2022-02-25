@@ -12,7 +12,7 @@ Grafana (Data visualization platform)<br/>
    sudo apt-get update                                  # Updates RPi
    sudo apt-get install apache2 -y                      # Installs Apache2
    sudo usermod -a -G www-data pi                       # Adds a new user to access the apache directory
-   sudo chown -R -f www-data:www-data /var/www/html     # Allow acces to apache directory
+   sudo chown -R -f www-data:www-data /var/www/html     # Allow access to apache directory
    ```
 
 2. Install MySQL: <br/>
@@ -44,7 +44,7 @@ Grafana (Data visualization platform)<br/>
    sudo wget -O /usr/share/adminer/index.php http://www.adminer.org/latest-en.php   # Downloads the latest version of adminer
    ```
 
-5. Incorporate Adminer to Apache <br/>
+5. Add Adminer to Apache <br/>
 
    ```bash
    sudo nano /etc/apache2/conf-available/adminer.conf    # Opens adminer.conf using nano text editor
@@ -72,17 +72,17 @@ Grafana (Data visualization platform)<br/>
 
    Test your installation by opening Chromium in your RPi then enter "http://localhost/adminer/". It should open a page that looks like this:
 
-   <img height="400" width="600" src="/tutorial_images/adminer.png"/>
+   <img height="400" width="800" src="/tutorial_images/adminer.png"/>
 
 6. Install Grafana
 
    ```bash
-   wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+   wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -                                            # Adds Grafana channel for updating
    echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
    sudo apt-get update
-   sudo apt-get install grafana -y
-   sudo /bin/systemctl enable grafana-server
-   sudo /bin/systemctl start grafana-server
+   sudo apt-get install grafana=6.7.6 -y              # Install Grafana
+   sudo /bin/systemctl enable grafana-server          # Enables Grafana (so it will run during start up)
+   sudo /bin/systemctl start grafana-server           # Starts Grafana service
    ```
 
    Test your installations by opening Chromium in your RPi then enter "http://localhost:3000". It should open a page that looks like this:
