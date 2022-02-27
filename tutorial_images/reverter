@@ -9,4 +9,6 @@ sudo rm -rf /etc/apache2/conf-available/adminer.conf
 sudo rm -rf /var/lib/apache2/conf/disabled_by_admin/adminer
 sudo service apache2 restart
 
+sudo /bin/systemctl disable grafana-server
+sudo /bin/systemctl stop grafana-server
 sudo apt-get remove grafana -y
