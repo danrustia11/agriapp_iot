@@ -10,6 +10,7 @@ import smbus2 # Used for interfacing with I2C
 import bme280 # Used for reading the bme280 sensor (pip3 install bme280)
 import json # Used for json encoding (pip3 install json)
 import time # Used for accessing time
+from datetime import datetime
 
 # Set MQTT connection variables
 username = 'sensor'
@@ -26,9 +27,6 @@ bus = smbus2.SMBus(i2c_port)
 # This device's number or identifier
 node = 1
 
-
-# 1. Initialize
-
 # Set username and password for connecting to RabbitMQ
 credentials = pika.PlainCredentials(username, password)
 
@@ -36,16 +34,10 @@ credentials = pika.PlainCredentials(username, password)
 connectParams = pika.ConnectionParameters(host=host, port=port, credentials=credentials)
 connection = pika.BlockingConnection(connectParams)
 channel = connection.channel()
-
-# Set queue (in which 'topic' the listener will subscribe)
-channel.queue_declare(queue='sensor')
+channel.exchange_declare(exchange='sensor', exchange_type='fanout')
 
 # Recalibrate bme280 sensor
 calibration_params = bme280.load_calibration_params(bus, address)
-
-
-
-
 
 while 1:
     # Reads bme280 sensor data
@@ -53,14 +45,21 @@ while 1:
     t = data.temperature
     h = data.humidity
     p = data.pressure
+
+    # Get the date/time in string format
+    now = datetime.now()
+    dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
+    
+    # Get the date/time in unix format
+    ts = time.time()
     
     # Encodes data into a json    
-    values = {"NODE": node, "T":t, "H":h, "P":p}
+    values = {"NODE": node, "TS": ts, "DT": dt_string, "T":t, "H":h, "P":p}
     message = json.dumps(values)
     
     # Publishes data to MQTT broker
-    channel.basic_publish(exchange='',
-                          routing_key='sensor',
+    channel.basic_publish(exchange='sensor',
+                          routing_key='',
                           body=message)
     
     # Just print the message
