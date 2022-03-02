@@ -72,7 +72,7 @@ TIP: You can copy each line to the terminal by CTRL+SHIFT+V<br/>
 
     <img height="500" width="700" src="/tutorial_images/adminer_configuration.png"/>
 
-   Press CTRL+O then ENTER to save the file.
+   Press CTRL+O then ENTER to save the file. Press CTRL+X to exit the text editor. 
    Restart apache to apply the changes.
 
    ```bash
