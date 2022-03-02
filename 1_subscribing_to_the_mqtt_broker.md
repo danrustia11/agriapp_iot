@@ -17,24 +17,3 @@ We have already cloned the github repository that contains the codes for this pa
    The output should look like this: </br>
 
    <img height="500" width="700" src="/tutorial_images/mqtt_3.png"/>
-
-5. Go back to your web browser and open adminer (http://localhost/adminer). <br/>
-   a. Login using your previously defined credentials. </br>
-
-   <img height="500" width="700" src="/tutorial_images/mqtt_4.png"/>
-
-   b. Click the database name (agriapp_data) </br>
-
-   <img height="500" width="700" src="/tutorial_images/mqtt_5.png"/>
-
-   c. Click the table name (sensor_data) </br>
-
-   <img height="500" width="700" src="/tutorial_images/mqtt_6.png"/>
-
-   d. Click Select data </br>
-
-   <img height="500" width="700" src="/tutorial_images/mqtt_7.png"/>
-
-   e. Watch as your data gets updated (you need to refresh your browser to see the changes) </br>
-
-   <img height="500" width="700" src="/tutorial_images/mqtt_8.png"/>
