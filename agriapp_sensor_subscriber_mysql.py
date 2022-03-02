@@ -60,11 +60,11 @@ def callback(ch, method, properties, body):
         print("[RX]: {}".format(body))
 
          # Saves data to the database
-        sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt_string, node, "T", t)
+        sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt, node, "T", t)
         mycursor.execute(sql)
-        sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt_string, node, "H", h)
+        sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt, node, "H", h)
         mycursor.execute(sql)
-        sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt_string, node, "P", p)
+        sql = "INSERT INTO {} (ID, TIMESTAMP, DATETIME, NODE, TYPE, VALUE) VALUES (NULL, {}, '{}', '{}', '{}', {})".format(table_name, ts, dt, node, "P", p)
         mycursor.execute(sql)
 
         # Apply changes to the database
