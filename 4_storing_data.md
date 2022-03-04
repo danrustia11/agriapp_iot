@@ -1,9 +1,9 @@
-# Running an MQTT subscriber for collecting data
+# Storing data to the MySQL database
 
-We have already cloned the github repository that contains the codes for this part. Open File explorer (the second icon found on the lower left of your VM). Open the <b>agriapp_iot</b> folder.
+Before proceeding to this step, please make sure that you have successfully created a MySQL database as accomplished by following 3_creating_a_database.md. <br/> 
 
-1. Right click on the file <b>agriapp_sensor_subscriber.py</b> and click Thonny Python Ide <br/>
-   This opens the file in a Python programming IDE called Thonny. </br>
+1. Open the <b>agriapp_iot</b> folder. Right click on the file <b>agriapp_sensor_subscriber_mysql.py</b> and click Thonny Python Ide <br/>
+   This is the same program with the one opened earlier (agriapp_sensor_subscriber.py) but with the MySQL connections and queries included.  </br>
 
    <img height="500" width="700" src="/tutorial_images/mqtt_1.png"/>
 

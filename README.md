@@ -5,7 +5,9 @@ This tutorial is for the participants of the Day 2 Internet of Things in Agricul
 
 This tutorial has four parts:<br/>
 0_logging_in.md : Instructions for accessing our virtual machines</br>
-1_environment_setup.md : Instructions for setting up Apache, MySQL, and Grafana in a Raspberry Pi</br>
-2_collecting_data_from_mqtt_broker : Instructions for running an MQTT subscriber program for collecting sensor data </br>
+1_subscribing_to_the_mqtt_broker: Instructions for running an MQTT subscriber program to collect sensor data </br>
+2_environment_setup.md : Instructions for setting up Apache, and MySQL in Raspberry Pi</br>
 3_creating_a_database.md : Instructions for creating a database and table for storing sensor data</br>
-4_creating_a_grafana_dashboard.md : Instructions for building a data visualization dashboard using Grafana </br>
+4_storing_data.md : Instructions for running the MQTT subscriber program with MySQL connection and queries to store data </br>
+5_installing_grafana.md : Instructions for setting Grafana in Raspberry Pi</br>
+6_creating_a_grafana_dashboard.md : Instructions for building a data visualization dashboard using Grafana </br>
